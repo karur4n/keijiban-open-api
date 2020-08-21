@@ -12,3 +12,9 @@ properties:
   postedAt:
     type: string
     format: date-time
+required:
+  - id
+  - author
+  - authorId
+  - body
+  - postedAt

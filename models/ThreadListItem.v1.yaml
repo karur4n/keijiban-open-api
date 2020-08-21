@@ -6,6 +6,13 @@ properties:
   title:
     type: string
   responseCount:
-    type: string
+    type: number
+    exclusiveMinimum: false
   lastPostedAt:
     type: string
+    format: date-time
+required:
+  - id
+  - title
+  - responseCount
+  - lastPostedAt

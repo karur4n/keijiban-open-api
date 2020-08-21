@@ -5,3 +5,6 @@ properties:
     type: string
   body:
     type: string
+required:
+  - authorName
+  - body

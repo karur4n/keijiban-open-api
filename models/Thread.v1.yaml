@@ -9,3 +9,7 @@ properties:
     type: array
     items:
       $ref: ./Response.v1.yaml
+required:
+  - id
+  - title
+  - responses
