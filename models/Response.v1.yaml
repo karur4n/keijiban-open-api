@@ -1,0 +1,14 @@
+title: Response
+type: object
+properties:
+  id:
+    type: string
+  author:
+    type: string
+  authorId:
+    type: string
+  body:
+    type: string
+  postedAt:
+    type: string
+    format: date-time

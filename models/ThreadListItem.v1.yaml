@@ -1,0 +1,11 @@
+title: ThreadListItem
+type: object
+properties:
+  id:
+    type: string
+  title:
+    type: string
+  responseCount:
+    type: string
+  lastPostedAt:
+    type: string

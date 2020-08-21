@@ -1,0 +1,9 @@
+title: ThreadDraft
+type: object
+properties:
+  id:
+    type: string
+  title:
+    type: string
+  responseDraft:
+    $ref: ./ResponseDraft.v1.yaml

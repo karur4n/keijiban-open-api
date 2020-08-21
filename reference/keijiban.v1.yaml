@@ -1,0 +1,87 @@
+openapi: 3.0.0
+info:
+  title: keijiban
+  version: '1.0'
+  contact:
+    name: karur4n
+  description: keijiban の API
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /threads:
+    get:
+      summary: スレッド一覧を取得する
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../models/ThreadListItem.v1.yaml
+      operationId: get-threads
+      description: スレッド一覧を取得する
+    post:
+      summary: スレッドを投稿する
+      operationId: post-threads
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Thread.v1.yaml
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../models/ThreadDraft.v1.yaml
+      description: スレッドを投稿する
+  '/threads/{threadId}':
+    parameters:
+      - schema:
+          type: string
+        name: threadId
+        in: path
+        required: true
+    get:
+      summary: スレッドを取得する
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Thread.v1.yaml
+      operationId: get-threads-threadId
+      description: スレッドを取得する
+  '/threads/{threadId}/responses':
+    parameters:
+      - schema:
+          type: string
+        name: threadId
+        in: path
+        required: true
+    post:
+      summary: スレッドのレスポンスを投稿する
+      operationId: post-threads-threadId-responses
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../models/Response.v1.yaml
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../models/ResponseDraft.v1.yaml
+      description: スレッドのレスポンスを投稿する
+components:
+  schemas: {}

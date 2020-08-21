@@ -1,0 +1,7 @@
+title: ResponseDraft
+type: object
+properties:
+  authorName:
+    type: string
+  body:
+    type: string

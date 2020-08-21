@@ -1,0 +1,11 @@
+title: Thread
+type: object
+properties:
+  id:
+    type: string
+  title:
+    type: string
+  responses:
+    type: array
+    items:
+      $ref: ./Response.v1.yaml
