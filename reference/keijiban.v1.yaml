@@ -6,7 +6,7 @@ info:
     name: karur4n
   description: keijiban の API
 servers:
-  - url: 'http://localhost:3000'
+  - url: 'http://localhost:3100'
 paths:
   /threads:
     get:
